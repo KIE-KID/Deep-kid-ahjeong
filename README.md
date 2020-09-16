@@ -1,9 +1,8 @@
 # Deep-Learning-from-Scratch
-스터디 - 밑바닥부터 시작하는 딥러닝
+### 스터디 - 밑바닥부터 시작하는 딥러닝
 
 ![교재](https://camo.githubusercontent.com/7e1a295ccd66bcb552ff2405bbbf831524e8a215/68747470733a2f2f7777772e68616e6269742e636f2e6b722f646174612f626f6f6b732f42383437353833313139385f6c2e6a7067)
 
----
 『밑바닥부터 시작하는 딥러닝』 (한빛미디어, 2017) - https://github.com/WegraLee/deep-learning-from-scratch/
 
 ---
