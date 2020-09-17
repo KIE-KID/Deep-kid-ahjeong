@@ -8,7 +8,7 @@
 ---
 
 Plan
-* Study with ![@Youngmi-Park](https://github.com/Youngmi-Park) 😝
+* Study with![@Youngmi-Park](https://github.com/Youngmi-Park) 😝
 * Start Date: 2020/09/14
 * End Date : ""
 
