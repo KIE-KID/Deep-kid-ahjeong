@@ -8,11 +8,11 @@
 ---
 
 Plan
-* Study with @Youngmi-Park
+* Study with![@Youngmi-Park](https://github.com/Youngmi-Park) 😝
 * Start Date: 2020/09/14
 * End Date : ""
 
-목차|이름|시작|종료|
+목차|이름|시작|종료| 
 ---|---|---|---
 01|헬로 파이썬|2020/09/14|2020/09/14
 02|퍼셉트론|2020/09/16|2020/09/16
