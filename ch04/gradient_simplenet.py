@@ -18,13 +18,12 @@ class simpleNet:
 
         return loss
  
-net = simpleNet()
-print(net.W)
 x = np.array([0.6, 0.9])
-p = net.predict(x)
-print(p)
+t = np.array([0, 0, 1])
 
-np.argmax(p)  #최댓값의 인덱스
+net = simpleNet()
 
-t = np.array([0, 0, 1)]) #정답 레이블
-net.loss(x, t)
+f = lambda w: net.loss(x, t)
+dW = numerical_gradient(f, net.W)
+
+print(dW)
