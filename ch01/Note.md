@@ -6,6 +6,7 @@
 
 - numpy.array - 배열 클래스
 - array.shape - 배열의 형상
+- 배열.astype(np.int) - 넘파이 배열의 자료형 변환할 때 (int)
 
 
 
