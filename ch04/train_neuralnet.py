@@ -2,7 +2,7 @@ import sys, os
 sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import matplotlib.pyplot as plt
-from dataset.mnist import load_mnist
+from mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
 # 데이터 읽기
@@ -11,9 +11,10 @@ from two_layer_net import TwoLayerNet
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
 # 하이퍼파라미터
-iters_num = 10000  # 반복 횟수를 적절히 설정한다.
+iters_num = 10000  # 반복 횟수를 적절히 설정한다.(경사법에 대한 반복 횟수)
 train_size = x_train.shape[0]
-batch_size = 100   # 미니배치 크기
+print(train_size)
+batch_size = 100   # 미니배치 크기 (매번 60000개 중에 임의의 100개의 데이터)
 learning_rate = 0.1
 
 train_loss_list = []
@@ -30,8 +31,8 @@ for i in range(iters_num):
     t_batch = t_train[batch_mask]
     
     # 기울기 계산
-    #grad = network.numerical_gradient(x_batch, t_batch)
-    grad = network.gradient(x_batch, t_batch)
+    grad = network.numerical_gradient(x_batch, t_batch)
+    # grad = network.gradient(x_batch, t_batch)
     
     # 매개변수 갱신
     for key in ('W1', 'b1', 'W2', 'b2'):
