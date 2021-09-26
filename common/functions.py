@@ -59,3 +59,13 @@ def cross_entropy_error(y, t):
 def softmax_loss(X, t):
     y = softmax(X)
     return cross_entropy_error(y, t)
+
+
+def tanh(x):
+    return (np.exp(x)-np.exp(-x)) / (np.exp(x) + np.exp(-x))
+
+def leaky_relu(x):
+    return np.maximum(0.01*x, x)
+
+def elu(x, alp):
+    return (x>0)* x + (x<=0)*(alp*(np.exp(x) - 1)) 

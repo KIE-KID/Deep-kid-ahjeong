@@ -25,17 +25,22 @@ def predict(network, x):
 
     a1 = np.dot(x, W1) + b1
     z1 = sigmoid(a1)
+    # z1 = relu(a1)
+    # z1 = identity_function(a1)
+    # z1 = tanh(a1)
+    # z1 = leaky_relu(a1)
+    # z1 = elu(a1, 0.99)
+    # z1 = step_function(a1)
     a2 = np.dot(z1, W2) + b2
     z2 = sigmoid(a2)
+    # z2 = relu(a2)
+    # z2 = identity_function(a2)
+    # z2 = tanh(a2)
+    # z2 = leaky_relu(a2)
+    # z2 = elu(a2, 0.99)
+    # z2 = step_function(a2)
     a3 = np.dot(z2, W3) + b3
-    # y = softmax(a3)
-    # y = sigmoid(a3)
-    # y = relu(a3)
-    # y = identity_function(a3)
-    # y = tanh(a3)
-    # y = leaky_relu(a3)
-    # y = elu(a3, 0.999)
-    y = step_function(a3)
+    y = softmax(a3)
 
     return y
 
