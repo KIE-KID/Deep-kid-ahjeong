@@ -1,13 +1,15 @@
 import sys, os
 sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+sys.path.append('/Users/ahjeong_park/Study/Deep-kid-ahjeong/')
 import numpy as np
 import matplotlib.pyplot as plt
-from mnist import load_mnist
+from dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
 # 데이터 읽기
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
+# Input(28*28 이미지 총 784개), Output(10)
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
 # 하이퍼파라미터
@@ -19,9 +21,9 @@ learning_rate = 0.1
 
 train_loss_list = []
 train_acc_list = []
-test_acc_list = []
+test_acc_list = [] 
 
-# 1에폭당 반복 수
+# 1에폭당 반복 수 --> 600
 iter_per_epoch = max(train_size / batch_size, 1)
 
 for i in range(iters_num):
